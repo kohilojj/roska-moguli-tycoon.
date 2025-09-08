@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roska Moguli Tycoon Ultra</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Sign-In -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div id="dashboard">
+    🗑️ Roskat: <span id="roskat">0</span> |
+    💰 Rahat: <span id="rahat">0</span> € |
+    ⚡ RPS: <span id="rps">0</span>/s |
+    👑 Prestige: <span id="prestige">0</span>
+  </div>
+
+  <div id="auth">
+    <div id="g_id_onload"
+         data-client_id="645853178160-ktjib5onu0omc26gifnae1lriv07a3ji.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    <p id="user"></p>
+  </div>
+
+  <h1>Roska Moguli Tycoon Ultra Edition</h1>
+  <button id="click-btn">Kerää Roskaa</button>
+  <p id="message"></p>
+
+  <div id="leaderboard">
+    <h3>Leaderboard</h3>
+    <ul id="leaders"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
