@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #111, #000);
+  color: #0ff;
+  text-align: center;
+}
+#clickBtn {
+  font-size: 24px;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg,#0ff,#0f0);
+  box-shadow: 0 0 20px #0ff;
+  cursor: pointer;
+}
+#leaderboard {
+  margin-top: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 8px;
+}
