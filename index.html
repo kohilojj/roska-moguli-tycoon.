@@ -2,45 +2,31 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roska Moguli Tycoon Ultra</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <title>Roska Moguli Tycoon Ultra+</title>
+  <link rel="stylesheet" href="style-v2.css">
 </head>
 <body>
-  <div id="dashboard">
-    🗑️ Roskat: <span id="roskat">0</span> |
-    💰 Rahat: <span id="rahat">0</span> € |
-    ⚡ RPS: <span id="rps">0</span>/s |
-    👑 Prestige: <span id="prestige">0</span>
-  </div>
+  <h1>Roska Moguli Tycoon Ultra+</h1>
+  <p id="user">Hei, Anon!</p>
 
-  <div id="auth">
-    <div id="g_id_onload"
-         data-client_id="645853178160-ktjib5onu0omc26gifnae1lriv07a3ji.apps.googleusercontent.com"
-         data-callback="handleCredentialResponse"></div>
-    <div class="g_id_signin" data-type="standard"></div>
-    <p id="user"></p>
-  </div>
-
-  <h1>Roska Moguli Tycoon Ultra Edition</h1>
-  <button id="click-btn">🗑️ Kerää Roskaa</button>
+  <button id="click-btn">Kerää roskaa</button>
+  <p>Roskia: <span id="roskat">0</span></p>
+  <p>Rahaa: <span id="rahat">0</span> €</p>
+  <p>Prestige: <span id="prestige">0</span></p>
+  <p>RPS: <span id="rps">0</span></p>
   <p id="message"></p>
 
   <h2>Kauppa</h2>
   <div id="shop"></div>
 
-  <div id="leaderboard">
-    <h3>Leaderboard</h3>
-    <ul id="leaders"></ul>
-  </div>
+  <h2>Leaderboard</h2>
+  <ul id="leaders"></ul>
 
-  <button id="mute-btn">🔊 Musiikki päälle/pois</button>
-
+  <button id="mute-btn">Musiikki päälle/pois</button>
   <audio id="bg-music" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <source src="assets/music.mp3" type="audio/mpeg">
   </audio>
 
-  <script src="script.js"></script>
+  <script src="script-v2.js"></script>
 </body>
 </html>
