@@ -1,7 +1,6 @@
 let roskat = 0, rahat = 0, prestige = 0, rps = 0, rpk = 1;
 let loggedIn = false;
 let playerName = "Anon";
-
 const API_URL = "https://roska-moguli-tycoon.onrender.com";
 
 const el = id => document.getElementById(id);
@@ -19,7 +18,7 @@ function update(msg = "") {
 
 el("click-btn").onclick = e => {
   let gain = rpk;
-  if (Math.random() < 0.1) { // 10% kritti
+  if (Math.random() < 0.1) {
     gain *= 10;
     spawnParticle(e.clientX, e.clientY, "+"+gain+"!");
   }
@@ -55,11 +54,12 @@ function handleCredentialResponse(res) {
 }
 window.handleCredentialResponse = handleCredentialResponse;
 
-// Kauppa
 const shopItems = [
   { name:"Roskakärry", cost:50, rps:1 },
   { name:"Jäteauto", cost:500, rps:10 },
-  { name:"Superpuristin", cost:5000, rps:50 }
+  { name:"Superpuristin", cost:5000, rps:50 },
+  { name:"RoskaTehdas", cost:50000, rps:500 },
+  { name:"MegaInc", cost:500000, rps:5000 }
 ];
 function renderShop() {
   el("shop").innerHTML = "";
@@ -81,7 +81,6 @@ function buyItem(i) {
 }
 renderShop();
 
-// Leaderboard
 async function loadLeaderboard() {
   try {
     const resp = await fetch(`${API_URL}/leaderboard`);
@@ -116,7 +115,6 @@ function spawnParticle(x,y,text) {
   setTimeout(()=>p.remove(), 1000);
 }
 
-// Musiikki
 const music = el("bg-music");
 el("mute-btn").onclick = ()=>{
   if (music.paused) music.play();

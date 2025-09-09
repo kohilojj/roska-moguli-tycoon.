@@ -1,50 +1,40 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #111, #222);
-  color: #0ff;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
   text-align: center;
+  padding: 20px;
 }
-#dashboard {
-  padding: 10px;
-  background: rgba(0,0,0,0.6);
-  font-weight: bold;
-}
-#click-btn {
-  font-size: 22px;
-  padding: 15px 30px;
-  margin: 20px;
+h1 { font-size: 2.5em; margin-bottom: 10px; }
+.ultra { color: gold; text-shadow: 2px 2px #000; }
+button {
+  background: #ff9800;
   border: none;
+  padding: 15px 25px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #0ff, #0f0);
-  box-shadow: 0 0 15px #0ff;
+  font-size: 1.2em;
   cursor: pointer;
-  transition: transform 0.2s;
+  margin: 10px;
+  transition: transform 0.1s;
 }
-#click-btn:hover {
-  transform: scale(1.1);
-}
-#leaderboard, #shop {
-  background: rgba(0,0,0,0.5);
-  margin: 20px auto;
-  padding: 15px;
-  max-width: 400px;
-  border-radius: 10px;
-}
+button:hover { transform: scale(1.1); }
+#shop { margin-top: 20px; }
 .shop-item {
+  background: rgba(0,0,0,0.4);
+  padding: 10px;
   margin: 5px;
-  padding: 5px;
-  border: 1px solid #0ff;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
+#leaders { list-style: none; padding: 0; }
+#leaders li { background: rgba(255,255,255,0.1); margin: 5px; padding: 5px; border-radius: 5px; }
 .particle {
   position: absolute;
-  font-size: 14px;
+  font-weight: bold;
   color: yellow;
-  animation: rise 1s linear forwards;
+  animation: floatUp 1s ease-out;
 }
-@keyframes rise {
-  0% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-50px); }
+@keyframes floatUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-50px); }
 }
