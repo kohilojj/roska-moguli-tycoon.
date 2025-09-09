@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #111, #222);
+  color: #0ff;
+  text-align: center;
+}
+#dashboard {
+  padding: 10px;
+  background: rgba(0,0,0,0.6);
+  font-weight: bold;
+}
+#click-btn {
+  font-size: 22px;
+  padding: 15px 30px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #0ff, #0f0);
+  box-shadow: 0 0 15px #0ff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#click-btn:hover {
+  transform: scale(1.1);
+}
+#leaderboard, #shop {
+  background: rgba(0,0,0,0.5);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.shop-item {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.particle {
+  position: absolute;
+  font-size: 14px;
+  color: yellow;
+  animation: rise 1s linear forwards;
+}
+@keyframes rise {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-50px); }
+}
