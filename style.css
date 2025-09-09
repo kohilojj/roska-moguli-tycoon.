@@ -1,35 +1,33 @@
 
 :root{
-  --bg:#0b1221;
-  --card:#0f1724;
-  --accent:#ffb86b;
-  --muted:rgba(255,255,255,0.7);
+  --bg:#071120;
+  --card:#0e1620;
+  --accent:#ffd166;
+  --muted:rgba(255,255,255,0.75);
 }
 *{box-sizing:border-box}
-body{font-family:Inter,system-ui,Segoe UI,Arial;background:var(--bg);color:#fff;margin:0;padding:24px;}
-.top{margin-bottom:18px;text-align:left;}
-.top h1{margin:0;font-size:28px;letter-spacing:1px;}
-.subtitle{margin:4px 0 0;color:var(--muted)}
-
-.container{display:grid;grid-template-columns:320px 1fr;gap:20px;align-items:start;}
-
-/* player card */
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.05));padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6);}
-.small{width:100%;}
-
-/* shop grid */
-.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-
-/* shop card */
-.shop-card{background:var(--card);border-radius:12px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px;box-shadow:0 8px 30px rgba(0,0,0,0.6);transition:transform .12s ease,box-shadow .12s ease;}
-.shop-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.7);}
-.card-header{display:flex;gap:10px;align-items:center;}
-.icon{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#232a3a,#1b2430);display:flex;align-items:center;justify-content:center;font-size:24px;}
-.title{font-weight:700}
-.desc{color:var(--muted);margin:10px 0;font-size:13px}
-
-/* footer */
-.card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
-.price{font-weight:800;color:var(--accent);font-size:16px}
-.buy-btn{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#000;font-weight:700;cursor:pointer}
-.buy-btn:disabled{opacity:0.45;cursor:not-allowed}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#fff;padding:20px}
+.wrap{max-width:1100px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.03));padding:20px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.logo{font-weight:800;font-size:20px;color:var(--accent)}
+.game{display:grid;grid-template-columns:1fr 420px;gap:18px}
+.stats{background:var(--card);padding:12px;border-radius:8px;display:grid;gap:8px}
+.actions{margin-top:10px}
+button{background:var(--accent);color:#071120;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:700}
+button[disabled]{opacity:0.5;cursor:not-allowed}
+.message{margin-top:8px;color:var(--muted);min-height:22px}
+.shop-area{background:var(--card);padding:12px;border-radius:8px}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px}
+.shop-card{background:#12202b;padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 20px rgba(0,0,0,0.6);transition:transform .12s,box-shadow .12s}
+.shop-card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,0.7)}
+.card-top{display:flex;align-items:center;gap:10px}
+.icon{width:54px;height:54;border-radius:10px;background:linear-gradient(135deg,#1b2430,#22313f);display:flex;align-items:center;justify-content:center;font-size:26px}
+.title{font-weight:800}
+.desc{color:var(--muted);font-size:13px}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:6px}
+.price{font-weight:900;color:var(--accent)}
+.buy-btn{background:linear-gradient(90deg,#ffd166,#ff9a66);padding:8px 10px;border-radius:8px;border:none;cursor:pointer;font-weight:800}
+.leaders{list-style:none;padding:0;margin:0;background:var(--card);padding:8px;border-radius:8px}
+.leaders li{padding:6px;border-bottom:1px solid rgba(255,255,255,0.02)}
+.footer{margin-top:14px;color:var(--muted);text-align:center}
+.controls{margin-top:12px;display:flex;gap:10px;align-items:center}

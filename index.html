@@ -1,45 +1,64 @@
 <!doctype html>
 <html lang="fi">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Roska Moguli Tycoon — Pro-kauppa</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roska Moguli Tycoon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
-  <header class="top">
-    <h1>Roska Moguli Tycoon</h1>
-    <p class="subtitle">Pro-kauppa — päivitä toimintasi korkeammalle tasolle</p>
-  </header>
+  <main class="wrap">
+    <header class="top">
+      <div class="logo">Roska Moguli Tycoon</div>
+      <div class="right">
+        <div id="user">Hei, Anon!</div>
+      </div>
+    </header>
 
-  <main class="container">
-    <section id="player" class="card small">
-      <div><strong>Pelaaja:</strong> <span id="user">Anon</span></div>
-      <div><strong>Rahaa:</strong> <span id="rahat">0</span> €</div>
-      <div><strong>RPS:</strong> <span id="rps">0</span></div>
+    <section class="game">
+      <div class="stats">
+        <div>Roskia: <span id="roskat">0</span></div>
+        <div>Rahat: <span id="rahat">0</span> €</div>
+        <div>Prestige: <span id="prestige">0</span></div>
+        <div>RPS: <span id="rps">0</span></div>
+      </div>
+
+      <div class="actions">
+        <button id="click-btn">Kerää roskaa</button>
+        <button id="prestige-btn">Prestige (reset)</button>
+      </div>
+
+      <div id="message" class="message"></div>
+
+      <section class="shop-area">
+        <h2>Pro-kauppa</h2>
+        <div id="shop" class="shop-grid"></div>
+      </section>
+
+      <section class="leaderboard-area">
+        <h2>Leaderboard</h2>
+        <ul id="leaders" class="leaders"></ul>
+      </section>
+
+      <div class="controls">
+        <div id="g_id_onload"
+             data-client_id="645853178160-ktjib5onu0omc26gifnae1lriv07a3ji.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse"></div>
+        <div class="g_id_signin" data-type="standard"></div>
+        <button id="mute-btn">Musiikki päälle/pois</button>
+      </div>
+
+      <audio id="bg-music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+      </audio>
     </section>
 
-    <section id="shop" class="shop-grid">
-      <!-- shop-kortit generoidaan scriptistä -->
-    </section>
+    <footer class="footer">
+      <a href="./FEATURES.txt" target="_blank">Katso FEATURES.txt</a>
+    </footer>
   </main>
 
-  <template id="shop-card-template">
-    <article class="shop-card">
-      <div class="card-header">
-        <div class="icon">🏷️</div>
-        <div class="title">Tuote</div>
-      </div>
-      <div class="card-body">
-        <p class="desc">Kuvaus</p>
-      </div>
-      <div class="card-footer">
-        <div class="price">0 €</div>
-        <button class="buy-btn">Osta</button>
-      </div>
-    </article>
-  </template>
-
-<script src="shop.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
