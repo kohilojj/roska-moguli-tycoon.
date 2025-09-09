@@ -1,12 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <title>Roska Moguli Tycoon Ultra</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Roska Moguli Tycoon — Pro-kauppa</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Roska Moguli Tycoon Ultra Edition 🚀</h1>
-  <p>Tämä on uuden version aloitussivu. Mukana 2000+ ominaisuutta!</p>
-  <p>Katso FEATURES.txt tiedosto kaikista ominaisuuksista.</p>
+  <header class="top">
+    <h1>Roska Moguli Tycoon</h1>
+    <p class="subtitle">Pro-kauppa — päivitä toimintasi korkeammalle tasolle</p>
+  </header>
+
+  <main class="container">
+    <section id="player" class="card small">
+      <div><strong>Pelaaja:</strong> <span id="user">Anon</span></div>
+      <div><strong>Rahaa:</strong> <span id="rahat">0</span> €</div>
+      <div><strong>RPS:</strong> <span id="rps">0</span></div>
+    </section>
+
+    <section id="shop" class="shop-grid">
+      <!-- shop-kortit generoidaan scriptistä -->
+    </section>
+  </main>
+
+  <template id="shop-card-template">
+    <article class="shop-card">
+      <div class="card-header">
+        <div class="icon">🏷️</div>
+        <div class="title">Tuote</div>
+      </div>
+      <div class="card-body">
+        <p class="desc">Kuvaus</p>
+      </div>
+      <div class="card-footer">
+        <div class="price">0 €</div>
+        <button class="buy-btn">Osta</button>
+      </div>
+    </article>
+  </template>
+
+<script src="shop.js"></script>
 </body>
 </html>
